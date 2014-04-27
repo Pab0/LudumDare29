@@ -3,4 +3,10 @@ public class GraphicManager {
 
 	GraphicPanel lnkGraphicPanel;
 	World lnkWorld;
+	
+	GraphicManager(GraphicPanel lnkGraphicPanel, World lnkWorld)
+	{
+		this.lnkGraphicPanel = lnkGraphicPanel;
+		this.lnkWorld = lnkWorld;
+	}
 }

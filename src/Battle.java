@@ -2,4 +2,9 @@
 public class Battle {
 
 	World lnkWorld;
+	
+	Battle(World lnkWorld)
+	{
+		this.lnkWorld = lnkWorld;
+	}
 }
