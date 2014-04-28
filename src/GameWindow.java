@@ -56,6 +56,7 @@ public class GameWindow extends JFrame{
 			System.out.println("Changing to End Panel");
 			break;
 		}
+		this.repaint();
 	}
 	
 	protected void setCurrentMode(int mode)

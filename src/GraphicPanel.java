@@ -17,6 +17,5 @@ public class GraphicPanel extends JPanel{
 	public void paintComponent(Graphics g)
 	{
 		this.graphicManager.render();
-		
 	}
 }

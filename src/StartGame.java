@@ -4,8 +4,8 @@ import java.awt.Dimension;
 public class StartGame {
 
 	private static final String GAME_NAME = "Not yet determined";
-	private static final int WINDOW_WIDTH = 500;
-	private static final int WINDOW_HEIGHT = 400;
+	protected static final int WINDOW_WIDTH = 500;
+	protected static final int WINDOW_HEIGHT = 400;
 	
 	static World world;
 	static GameWindow gameWindow;
