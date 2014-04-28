@@ -16,6 +16,7 @@ public class StartGame {
 		world = new World();
 		//Create GameWindow (and recursively the rest of the display objects)
 		gameWindow = new GameWindow(new Dimension(StartGame.WINDOW_WIDTH, StartGame.WINDOW_HEIGHT), world);
+		System.out.println("Game set up.");
 		world.gameLoop();
 	}
 

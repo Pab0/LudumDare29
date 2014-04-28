@@ -1,26 +1,47 @@
+import java.awt.Color;
+import java.awt.event.KeyEvent;
+import java.awt.event.KeyListener;
 import java.awt.image.BufferedImage;
 
 import javax.swing.JPanel;
 
-public class SplashScreen extends JPanel{
+public class SplashScreen extends JPanel implements KeyListener{
 	
-	public static final int STARTING_PANEL = 0;
-	public static final int ENDING_PANEL = 100;
-
 	GameWindow lnkGameWindow;
 	BufferedImage img;
 	
-	SplashScreen(int panelIndicator)
+	SplashScreen(int panelIndicator, GameWindow lnkGameWindow)
 	{
-		if (panelIndicator==SplashScreen.STARTING_PANEL)
+		this.lnkGameWindow = lnkGameWindow;
+		this.setBackground(Color.BLACK);
+		this.setFocusable(true);
+		this.addKeyListener(this);
+		if (panelIndicator==GameWindow.START_PANEL)
 		{
-			System.out.println("Drawing the starting splash panel.");
 			//drawImage of starting Screen
 		}
-		else if (panelIndicator==SplashScreen.ENDING_PANEL)
+		else if (panelIndicator==GameWindow.END_PANEL)
 		{
-			System.out.println("Drawing the ending splash panel.");
 			//drawImage of ending Screen
 		}
+	}
+
+	@Override
+	public void keyPressed(KeyEvent e) {
+		System.out.println("Pressed " + e.getKeyChar());
+		char c = e.getKeyChar();
+		if (c==' ' )	//Switching to Text Panel
+		{
+			lnkGameWindow.setCurrentMode(GameWindow.TEXT_MODE);
+		}
+		
+	}
+
+	@Override
+	public void keyReleased(KeyEvent e) {	
+	}
+
+	@Override
+	public void keyTyped(KeyEvent e) {	
 	}
 }

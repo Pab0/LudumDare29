@@ -1,3 +1,5 @@
+import java.awt.Color;
+
 import javax.swing.JPanel;
 
 public class TextPanel extends JPanel{
@@ -7,5 +9,6 @@ public class TextPanel extends JPanel{
 	TextPanel(World lnkWorld)
 	{
 		this.textManager = new TextManager(this, lnkWorld);
+		this.setBackground(Color.BLUE);
 	}
 }

@@ -9,4 +9,9 @@ public class GraphicManager {
 		this.lnkGraphicPanel = lnkGraphicPanel;
 		this.lnkWorld = lnkWorld;
 	}
+	
+	public void render()
+	{
+		//Kwsta diko sou
+	}
 }
